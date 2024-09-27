@@ -17,6 +17,10 @@ wget https://github.com/prometheus/prometheus/releases/download/v2.37.7/promethe
 Extract the Prometheus archive:
 tar -xzf prometheus-2.37.7.linux-amd64.tar.gz
 
+then 
+vi prometheus.yml
+here we need to edit targets, after - targets: ["localhost:9090", "add node exporter port"]
+
 Move the extracted folder to /opt/prometheus:
 sudo mv prometheus-2.37.7.linux-amd64 /opt/prometheus
 
